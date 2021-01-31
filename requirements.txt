@@ -1,3 +1,5 @@
+Flask_SeaSurf==0.3.0
+flask_talisman==0.7.0
 Flask==1.0.2
 Flask_SQLAlchemy==2.4.4
 Flask_Session==0.3.2
