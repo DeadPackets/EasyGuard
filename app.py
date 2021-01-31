@@ -6,6 +6,8 @@ from flask_seasurf import SeaSurf
 
 # Library imports
 from modules.DB import db
+from modules.DataHandler import db
+
 
 # Initialize flask
 app = Flask(__name__)
@@ -26,6 +28,13 @@ csrf = SeaSurf(app)
 
 # Initialize SQLAlchemy
 db.init_app(app)
+if app.config['DROP_DB_ON_RUN']:
+    db.drop_all(app=app)
 
 # Set up flask sessions
+SESSION_SQLALCHEMY = db
+app.config.from_object(__name__)
 Session(app)
+
+# Setup the database
+db.create_all(app=app)

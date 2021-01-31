@@ -1,3 +1,6 @@
+# Ignore database
+easyguard.db
+
 # Ignore vscode settings
 .vscode/
 
