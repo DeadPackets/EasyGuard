@@ -5,7 +5,7 @@ from flask_talisman import Talisman, DENY
 from flask_seasurf import SeaSurf
 
 # Library imports
-from lib.DB import db
+from modules.DB import db
 
 # Initialize flask
 app = Flask(__name__)
