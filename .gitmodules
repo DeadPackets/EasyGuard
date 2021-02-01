@@ -1,3 +1,0 @@
-[submodule "wgtools"]
-	path = modules/wgtools
-	url = https://github.com/conqp/wgtools

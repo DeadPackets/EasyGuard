@@ -6,7 +6,7 @@ from os import linesep
 from pathlib import Path
 from subprocess import check_call, check_output
 from typing import NamedTuple
-
+import shutil
 
 __all__ = [
     'WG',
@@ -21,7 +21,7 @@ __all__ = [
 ]
 
 
-WG = '/usr/bin/wg'
+WG = shutil.which('wg')
 
 
 class Keypair(NamedTuple):

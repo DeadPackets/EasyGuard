@@ -4,10 +4,8 @@ from flask_session.__init__ import Session
 from flask_talisman import Talisman, DENY
 from flask_seasurf import SeaSurf
 
-# Library imports
+# Database import
 from modules.DB import db
-from modules.DataHandler import db
-
 
 # Initialize flask
 app = Flask(__name__)
@@ -38,3 +36,13 @@ Session(app)
 
 # Setup the database
 db.create_all(app=app)
+app.app_context().push()
+
+# With the database setup, import extra modules
+from modules.DataHandler import *
+from modules.vpn import VPN
+
+# Flask routes
+@app.route('/', methods=['GET'])
+def main():
+    return 'Hello'

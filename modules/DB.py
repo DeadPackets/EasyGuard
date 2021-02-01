@@ -19,6 +19,7 @@ class Profile(db.Model):
     download = db.Column(db.Float(), nullable=False)
     private_key = db.Column(db.Text(), nullable=False)
     public_key = db.Column(db.Text(), nullable=False)
+    ip_address = db.Column(db.String(16), nullable=False)
     time_total = db.Column(db.Float(), nullable=False)
     time_current = db.Column(db.Float(), nullable=False)
     status = db.Column(db.SmallInteger(), nullable=False)

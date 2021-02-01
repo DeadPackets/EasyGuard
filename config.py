@@ -1,5 +1,9 @@
 import os
 
+# VPN Settings
+WIREGUARD_CONFIG_FILE = '/usr/local/etc/wireguard/wg0.conf'
+VPN_NETWORK = '10.69.0.0/16'
+
 # Development
 DEVELOPMENT = False
 DROP_DB_ON_RUN = False
